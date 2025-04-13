@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f389746b874230422c2f5827867cea99 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_f389746b874230422c2f5827867cea99" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f389746b874230422c2f5827867cea99 = L.map(
+                "map_f389746b874230422c2f5827867cea99",
+                {
+                    center: [33.642963, -117.836463],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_230945c3ad9bf2a9a6c42068d0806f06 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_230945c3ad9bf2a9a6c42068d0806f06.addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var marker_533dcb4cf257ce68462b2b901519280d = L.marker(
+                [33.642963, -117.836463],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_50def6ae8dcae01a8b322e767a0de54f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d9a549a566201f85a8029a632311880a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ef1619754f0478ea12a44b128308305 = $(`<div id="html_7ef1619754f0478ea12a44b128308305" style="width: 100.0%; height: 100.0%;">A. 515 E Peltason Dr</div>`)[0];
+                popup_d9a549a566201f85a8029a632311880a.setContent(html_7ef1619754f0478ea12a44b128308305);
+            
+        
+
+        marker_533dcb4cf257ce68462b2b901519280d.bindPopup(popup_d9a549a566201f85a8029a632311880a)
+        ;
+
+        
+    
+    
+                marker_533dcb4cf257ce68462b2b901519280d.setIcon(icon_50def6ae8dcae01a8b322e767a0de54f);
+            
+    
+            var marker_e6d7c39909266e6c5e21dfdf6b0acfb6 = L.marker(
+                [33.640275, -117.841219],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_16834b6e48ee65706a4780bb2fa53eae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c449631d6b30c2597d8067794ce0308 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bb0eb64278ee61bbec78f494338bde7 = $(`<div id="html_2bb0eb64278ee61bbec78f494338bde7" style="width: 100.0%; height: 100.0%;">B. 4 Alcott Ct</div>`)[0];
+                popup_9c449631d6b30c2597d8067794ce0308.setContent(html_2bb0eb64278ee61bbec78f494338bde7);
+            
+        
+
+        marker_e6d7c39909266e6c5e21dfdf6b0acfb6.bindPopup(popup_9c449631d6b30c2597d8067794ce0308)
+        ;
+
+        
+    
+    
+                marker_e6d7c39909266e6c5e21dfdf6b0acfb6.setIcon(icon_16834b6e48ee65706a4780bb2fa53eae);
+            
+    
+            var marker_aee954b3622a50cbfed2f47312106623 = L.marker(
+                [33.634868, -117.841251],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_d6ae0b0818bb7eb03844d17ac88af33d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_256aae5a12475f001b09a202a3431907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a95166dcbe5e56f427f4e641215556e2 = $(`<div id="html_a95166dcbe5e56f427f4e641215556e2" style="width: 100.0%; height: 100.0%;">C. 16 Joyce Ct</div>`)[0];
+                popup_256aae5a12475f001b09a202a3431907.setContent(html_a95166dcbe5e56f427f4e641215556e2);
+            
+        
+
+        marker_aee954b3622a50cbfed2f47312106623.bindPopup(popup_256aae5a12475f001b09a202a3431907)
+        ;
+
+        
+    
+    
+                marker_aee954b3622a50cbfed2f47312106623.setIcon(icon_d6ae0b0818bb7eb03844d17ac88af33d);
+            
+    
+            var marker_3d5e6ed84e96b00448dea7d3a31d5dc1 = L.marker(
+                [33.634868, -117.841251],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_b11e4f2d698b1f725b7f6a2a5438d14a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32623294417ef3c07e60d16d6f97c861 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_482b41a676bf02bcac9adc613cc795ad = $(`<div id="html_482b41a676bf02bcac9adc613cc795ad" style="width: 100.0%; height: 100.0%;">D. 16 Joyce Ct</div>`)[0];
+                popup_32623294417ef3c07e60d16d6f97c861.setContent(html_482b41a676bf02bcac9adc613cc795ad);
+            
+        
+
+        marker_3d5e6ed84e96b00448dea7d3a31d5dc1.bindPopup(popup_32623294417ef3c07e60d16d6f97c861)
+        ;
+
+        
+    
+    
+                marker_3d5e6ed84e96b00448dea7d3a31d5dc1.setIcon(icon_b11e4f2d698b1f725b7f6a2a5438d14a);
+            
+    
+            var marker_e14052352ce21885d2b7b205dfec9008 = L.marker(
+                [33.658228, -117.774814],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_ec76b610ccdca2a457a96a7a2b6122c5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f673da0c3483e1380d5cf589e61a992a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b008fa59902130f9a8513bfb961c3477 = $(`<div id="html_b008fa59902130f9a8513bfb961c3477" style="width: 100.0%; height: 100.0%;">E. 6640 Alton Pkwy</div>`)[0];
+                popup_f673da0c3483e1380d5cf589e61a992a.setContent(html_b008fa59902130f9a8513bfb961c3477);
+            
+        
+
+        marker_e14052352ce21885d2b7b205dfec9008.bindPopup(popup_f673da0c3483e1380d5cf589e61a992a)
+        ;
+
+        
+    
+    
+                marker_e14052352ce21885d2b7b205dfec9008.setIcon(icon_ec76b610ccdca2a457a96a7a2b6122c5);
+            
+    
+            var marker_7acf3874e078b3d6af8386eff82bb79d = L.marker(
+                [33.658228, -117.774814],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_429ecd69789e6d1162ce9458a9774d3d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de4a4d7b4c69c3f10afc3ddd4af4b073 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0606ce0fafdff09dee0ed66129dcca21 = $(`<div id="html_0606ce0fafdff09dee0ed66129dcca21" style="width: 100.0%; height: 100.0%;">Emergency: 6640 Alton Pkwy</div>`)[0];
+                popup_de4a4d7b4c69c3f10afc3ddd4af4b073.setContent(html_0606ce0fafdff09dee0ed66129dcca21);
+            
+        
+
+        marker_7acf3874e078b3d6af8386eff82bb79d.bindPopup(popup_de4a4d7b4c69c3f10afc3ddd4af4b073)
+        ;
+
+        
+    
+    
+                marker_7acf3874e078b3d6af8386eff82bb79d.setIcon(icon_429ecd69789e6d1162ce9458a9774d3d);
+            
+    
+            var marker_fa1121e2ae8180e40567c94c502f9b90 = L.marker(
+                [33.634868, -117.841251],
+                {
+}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+    
+            var icon_f8d68206acbbd325668257e5a661dc17 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9b70a7a468ffed7e267285f2fe94f745 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4012fb136446fa95c83a0b3d7c8901c2 = $(`<div id="html_4012fb136446fa95c83a0b3d7c8901c2" style="width: 100.0%; height: 100.0%;">Your Location: 16 Joyce Ct</div>`)[0];
+                popup_9b70a7a468ffed7e267285f2fe94f745.setContent(html_4012fb136446fa95c83a0b3d7c8901c2);
+            
+        
+
+        marker_fa1121e2ae8180e40567c94c502f9b90.bindPopup(popup_9b70a7a468ffed7e267285f2fe94f745)
+        ;
+
+        
+    
+    
+                marker_fa1121e2ae8180e40567c94c502f9b90.setIcon(icon_f8d68206acbbd325668257e5a661dc17);
+            
+    
+            var poly_line_da8c2352c0e10c5e503d4639848f927b = L.polyline(
+                [[33.642963, -117.836463], [33.640275, -117.841219], [33.634868, -117.841251], [33.634868, -117.841251], [33.658228, -117.774814], [33.642963, -117.836463]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_f389746b874230422c2f5827867cea99);
+        
+</script>
+</html>
