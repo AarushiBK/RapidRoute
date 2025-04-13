@@ -2,7 +2,6 @@ from personator_api import enrich_address
 from route_optimizer import shortest_route, distance_between_points
 from create_map import plot_route
 
-# Define safe locations for emergencies with address details
 safe_locations = {
     "wildfire/disaster": [
         {"Address": "600 Parkcenter Drive", "City": "Santa Ana", "State": "CA", "Zip": "92705"},
@@ -53,7 +52,6 @@ def get_emergency_type():
     return emergency_types.get(emergency_choice)
 
 def main():
-    # Predefined addresses to visit
     addresses = [
         {"Address": "515 E Peltason Dr", "City": "Irvine", "State": "CA", "Zip": "92617"},
         {"Address": "4 Alcott Ct", "City": "Irvine", "State": "CA", "Zip": "92617"},
@@ -62,7 +60,6 @@ def main():
 
     enriched_addresses = []
     
-    # Enrich predefined addresses with geolocation data
     for addr in addresses:
         result = enrich_address(addr)
         if result:
@@ -72,18 +69,17 @@ def main():
         print("Not enough valid points to calculate a route.")
         return
 
-    # Calculate the shortest route among predefined addresses
+
     best_route, total_distance = shortest_route(enriched_addresses)
     print(f"\nOptimal Route Found! Total Distance: {total_distance:.2f} mi\n")
     for index, stop in enumerate(best_route):
-        print(f" - {chr(65 + index)}. {stop['input']['Address']}")  # Display as A, B, C, etc.
+        print(f" - {chr(65 + index)}. {stop['input']['Address']}")
 
-    # Ask user if they want to enable emergency options
+
     emergency_enabled = input("Do you want to enable emergency options? (yes/no): ").strip().lower()
     
     user_location = None
     if emergency_enabled == 'yes':
-        # Get user location
         user_location = get_user_location()
         enriched_location = enrich_address(user_location)
         
@@ -91,15 +87,11 @@ def main():
             print("Could not enrich the current location.")
             return
 
-        # Get emergency type
         emergency_type = get_emergency_type()
         if not emergency_type:
             print("No emergency type selected. Exiting.")
             return
 
-        # Enrich the nearest safe location based
-        
-        # Enrich the nearest safe location based on emergency type
         nearest_safe_location = None
         min_distance = float('inf')
 
@@ -113,8 +105,7 @@ def main():
 
         if nearest_safe_location:
             print(f"Nearest safe location for {emergency_type}: {nearest_safe_location['input']['Address']} ({min_distance:.2f} miles away)")
-            
-            # Create a route that includes the user's location and the nearest safe location
+
             route_points = best_route + [enriched_location, nearest_safe_location]
             plot_route(route_points, filename="optimized_route_map.html", emergency_location=nearest_safe_location, user_location=enriched_location)
             print("Updated route map saved to optimized_route_map.html")
