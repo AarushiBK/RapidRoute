@@ -4,7 +4,7 @@ import json
 import os
 
 BASE_URL = "https://personator.melissadata.net/v3/WEB/ContactVerify/doContactVerify"
-LICENSE = "FNBofqXaFm0Cmwp4qOJ1C-**nSAcwXpxhQ0PC2lXxuDAZ-**"  # Use environment variable for license
+LICENSE = "YOUR_LICENSE"
 
 
 def enrich_address(address_dict):
@@ -23,13 +23,11 @@ def enrich_address(address_dict):
     url = f"{BASE_URL}?{urllib.parse.urlencode(params)}"
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Raise an error for bad responses
+        response.raise_for_status()
         data = response.json()
-
-        # Check if there are any valid records
+        
         record = data.get("Records", [{}])[0]
         
-        # Fetch latitude and longitude
         lat = record.get("Latitude", None)
         lon = record.get("Longitude", None)
 
